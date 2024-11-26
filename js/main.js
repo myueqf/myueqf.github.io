@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
             timeout: 2500,
             icon: false,
             title: hello,
-            message: '欢迎来到我的主页'
+            message: '(∠・ω< )⌒☆'
         });
     }, 800);
 
@@ -77,7 +77,7 @@ window.addEventListener('load', function () {
 }, false)
 
 setTimeout(function () {
-    $('#loading-text').html("字体及文件加载可能需要一定时间")
+    $('#loading-text').html("一会，再一会就好啦～别急嘛QwQ")
 }, 3000);
 
 // 新春灯笼 （ 需要时可取消注释 ）
@@ -93,39 +93,143 @@ setTimeout(function () {
 // document.body.appendChild(new_element);
 
 //获取一言
-fetch('https://v1.hitokoto.cn?max_length=24')
-    .then(response => response.json())
-    .then(data => {
-        $('#hitokoto_text').html(data.hitokoto)
-        $('#from_text').html(data.from)
-    })
-    .catch(console.error)
+//fetch('https://v1.hitokoto.cn?max_length=24')
+//    .then(response => response.json())
+//    .then(data => {
+//        $('#hitokoto_text').html(data.hitokoto)
+//        $('#from_text').html(data.from)
+//    })
+//    .catch(console.error)
+//
+//let times = 0;
+//$('#hitokoto').click(function () {
+//    if (times == 0) {
+//        times = 1;
+//        let index = setInterval(function () {
+//            times--;
+//            if (times == 0) {
+//                clearInterval(index);
+//            }
+//        }, 1000);
+//        fetch('https://v1.hitokoto.cn?max_length=24')
+//            .then(response => response.json())
+//            .then(data => {
+//                $('#hitokoto_text').html(data.hitokoto)
+//                $('#from_text').html(data.from)
+//            })
+//            .catch(console.error)
+//    } else {
+//        iziToast.show({
+//            timeout: 1000,
+//            icon: "fa-solid fa-circle-exclamation",
+//            message: '你点太快了吧'
+//        });
+//    }
+//});
+
+
+// 一言～
+const hitokotoArray = [
+    ["天官赐福", "为你战死，是我至高无上的荣耀。"],
+    ["七芒星", "撕开云雾，你就是光"],
+    ["撒野", "我会喜欢到你不喜欢我为止"],
+    ["全球高考", "世界灿烂盛大，欢迎回家"],
+    ["附加遗产", "我说过很多谎，但我爱你是真的"],
+    ["一醉经年", "你点到即止，我一醉方休"],
+    ["撒野", "希望我们都能像对方一样勇敢"],
+    ["AWM绝地求生", "你是我的AWM，你是我的可遇不可求"],
+    ["相见欢", "手握山河剑，愿为君司南"],
+    ["杀破狼", "经年痴心妄想，一时走火入魔"],
+    ["犹记斐然", "待君归来时，共饮长生酒。"],
+    ["魔道祖师", "你特别好，我喜欢你。"],
+    ["刺青", "希望你永远快乐，任何选择之后都洒脱。"],
+    ["穿成万人迷文里的替身", "你救我一命，我还你长生。"],
+    ["伪装学渣", "一起去啊，更远的地方。"],
+    ["帝王攻略", "江山是我的责任，你才是我的牵挂。"],
+    ["判官", "他跪坐其间，吻了红尘。"],
+    ["这题超纲了", "喜欢总是轰轰烈烈，想摘星也总是义无反顾。"],
+    ["天官赐福", "殿下，风光无限的是你，跌落尘埃的也是你，重点是你，而不是怎样的你。"],
+    ["默读", "哄你高兴就是最重要的事情。"],
+    ["犹记斐然", "待君归来时，共饮长生酒。"],
+    ["魔道祖师", "你特别好，我喜欢你。"],
+    ["刺青", "希望你永远快乐，任何选择之后都洒脱。"],
+    ["穿成万人迷文里的替身", "你救我一命，我还你长生。"],
+    ["伪装学渣", "一起去啊，更远的地方。"],
+    ["帝王攻略", "江山是我的责任，你才是我的牵挂。"],
+    ["判官", "他跪坐其间，吻了红尘。"],
+    ["这题超纲了", "喜欢总是轰轰烈烈，想摘星也总是义无反顾。"],
+    ["天官赐福", "殿下，风光无限的是你，跌落尘埃的也是你，重点是你，而不是怎样的你。"],
+    ["默读", "哄你高兴就是最重要的事情。"],
+    ["天官赐福", "天下无不散之筵席，但我永远不会离开你。"],
+    ["天官赐福", "为你灯明三千，为你花开满城，为你所向披靡。"],
+    ["我喜欢你的信息素", "人闲车马慢，路遥星亦辞"],
+    ["将进酒", "先生授我以诗书，我为先生杀宿仇。"],
+    ["将进酒", "红梅覆雪，兰舟笼香，一笑千金值。"],
+    ["将进酒", "你坐明堂上，不要沾风雪。"],
+    ["将进酒", "今日起，我的兰舟就是天下共主，天下五十六万大军尽归你麾下。名堂高殿你随意出入，我萧策安刀挂前堂，替你镇守八方豪雄。"],
+    ["全球高考", "两千三百一十二天，他们在寒风朔雪中，以为是相遇，其实是重逢。"],
+    ["默读", "未经允许，擅自特别喜欢你，不好意思了。"],
+    ["某某", "十七岁那年，蝉鸣声响，白马梧桐。十七岁少年，轻狂奔跑，仲夏荒原。他们发着光，也流着汗。他们无坚不摧，也无所不能。"],
+    ["天官赐福", "上元佳节，神武大街，惊鸿一瞥，百世沦陷。"],
+    ["凤于九天", "天下壮丽江山,吾与你共享。世间轰烈快事,吾与你分尝。唯有灾难,吾一人独挡。"],
+    ["过门", "天地间羁旅客，离别三十余年，到头来，终有一聚。"],
+    ["全球高考", "我不是来救你的，我是来爱你的。"],
+    ["破云", "再次相聚之前，谢谢你带我回到这人世间。"],
+    ["碎玉投珠", "汉白玉佩珍珠扣，朝夕与共到白头。"],
+    ["FOG", "不喜欢的人的心机才是心机，喜欢的人的心机，那叫撒娇。"],
+    ["我只喜欢你的人设", "只有玫瑰与你相称。"],
+    ["撒野", "满怀希望就会所向披靡。"],
+    ["天官赐福", "我有一个心爱之人还在这世上，我想保护他，我愿永不安息。"],
+    ["天官赐福", "若无所谓畏惧，便无所谓勇敢。"],
+    ["这题超纲了", "强扭的瓜，不试试怎么知道甜不甜。"],
+    ["我喜欢你的信息素", "如果你有喜欢的人，或者暗恋的人，他很优秀，优秀到常人难以企及的地步。那就好好高考，走到他的未来去。"],
+    ["我喜欢你的信息素", "见过你之后，风花雪月都黯淡无光。"],
+    ["碎玉投珠", "一盏月亮，一花糕，一地玫瑰，换印章。"],
+    ["天官赐福", "我愿供灯千盏，照彻长夜，即便飞蛾扑火，也在所不辞。"],
+    ["提灯看刺刀", "我看到他的第一眼，就喜欢的连自己叫什么都忘了。"],
+    ["尖锐沉默", "我永远向你承诺，在这斗争岁月里，只有吻你的时候，我才会低头。"],
+    ["君有疾否", "一愿社稷昌，二愿黎民安，三愿我所爱无忧无患，岁岁长安"],
+    ["白日事故", "他来时风尘仆仆，停时依旧是光。而他朝他一笑，梦都在晃。"]
+];
+
+// 获取随机内容的函数
+function getRandomHitokoto() {
+    const randomIndex = Math.floor(Math.random() * hitokotoArray.length);
+    return hitokotoArray[randomIndex];
+}
+
+// 初始化第一个文本
+const initialHitokoto = getRandomHitokoto();
+$('#hitokoto_text').html(initialHitokoto[1]);
+$('#from_text').html(initialHitokoto[0]);
 
 let times = 0;
 $('#hitokoto').click(function () {
-    if (times == 0) {
+    if (times === 0) {
         times = 1;
         let index = setInterval(function () {
             times--;
-            if (times == 0) {
+            if (times === 0) {
                 clearInterval(index);
             }
         }, 1000);
-        fetch('https://v1.hitokoto.cn?max_length=24')
-            .then(response => response.json())
-            .then(data => {
-                $('#hitokoto_text').html(data.hitokoto)
-                $('#from_text').html(data.from)
-            })
-            .catch(console.error)
+        
+        // 获取新的一言
+        const newHitokoto = getRandomHitokoto();
+        $('#hitokoto_text').html(newHitokoto[1]);
+        $('#from_text').html(newHitokoto[0]);
+        
     } else {
         iziToast.show({
             timeout: 1000,
             icon: "fa-solid fa-circle-exclamation",
-            message: '你点太快了吧'
+            message: '别点这么快嘛QAQ'
         });
     }
 });
+
+
+
 
 //获取天气
 //请前往 https://www.mxnzp.com/doc/list 申请 app_id 和 app_secret
@@ -234,12 +338,12 @@ $("#social").mouseover(function () {
 });
 
 $("#github").mouseover(function () {
-    $("#link-text").html("去 Github 看看");
+    $("#link-text").html("去 Github 康康噢～");
 }).mouseout(function () {
     $("#link-text").html("通过这里联系我");
 });
 $("#qq").mouseover(function () {
-    $("#link-text").html("有什么事吗");
+    $("#link-text").html("有什么事嘛？");
 }).mouseout(function () {
     $("#link-text").html("通过这里联系我");
 });
@@ -377,7 +481,7 @@ document.oncontextmenu = function () {
     iziToast.show({
         timeout: 2000,
         icon: "fa-solid fa-circle-exclamation",
-        message: '为了浏览体验，本站禁用右键'
+        message: '右键被猫猫叼走了啦～'
     });
     return false;
 }
@@ -396,7 +500,7 @@ color: rgb(244,167,89);
 let styleContent = `
 color: rgb(30,152,255);
 `
-let title1 = '明月清风の小窝'
+let title1 = '真的有人会注意到这一行字嘛？'
 let title2 = `
 #
 `

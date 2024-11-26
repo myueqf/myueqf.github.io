@@ -50,19 +50,19 @@ init_life_time()
 
 now = new Date(), hour = now.getHours()
 if (hour < 6) {
-    var hello = "凌晨好";
+    var hello = "凌晨好噢~";
 } else if (hour < 9) {
-    var hello = "早上好";
+    var hello = "早上好呀~";
 } else if (hour < 12) {
-    var hello = "上午好";
+    var hello = "上午好捏~";
 } else if (hour < 14) {
-    var hello = "中午好";
+    var hello = "午好~";
 } else if (hour < 17) {
-    var hello = "下午好";
+    var hello = "下午好捏~";
 } else if (hour < 19) {
-    var hello = "傍晚好";
+    var hello = "傍晚好噢~";
 } else if (hour < 22) {
-    var hello = "晚上好";
+    var hello = "晚上好呀~";
 } else {
-    var hello = "夜深了";
+    var hello = "夜深了哦~";
 }
