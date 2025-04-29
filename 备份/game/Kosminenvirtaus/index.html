@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kosminenvirtaus JS13k 2021</title>
+
+        <style type="text/css">
+            body { 
+                margin: 0;
+                overflow: hidden;
+                padding: 0;
+                background-color: black;
+            }
+            #canvasgl {
+                position: absolute;
+            }
+            #canvas2d {
+                position: absolute;
+            }
+            div {
+                color: white;
+                padding-left: 16px;
+                padding-top: 16px;
+                position: absolute;
+            }
+        </style>
+    <body>
+        <div id="hello">
+            Kosminenvirtaus
+            <br/><br/>玩法：移动鼠标来控制方向。
+            <br/>跟随蓝色粒子的路径，避开红色粒子。
+            <br/>蓝色粒子会增加你的能量（和速度），红色粒子会减少它，不要失去所有能量。
+            <br/>要改变图形设置，请按1、2、3或4。
+            <br/><br/>点击屏幕开始
+        </div>
+        <canvas id="canvasgl" width="1280" height="700"></canvas>
+        <canvas id="canvas2d" width="1280" height="700"></canvas>
+        <div id="debug_div"></div>
+        <script src="bundle.js"></script>
+    </body>
+</html>
