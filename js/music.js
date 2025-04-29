@@ -1,33 +1,23 @@
-/*
-音乐信息
-
-感谢 @武恩赐 提供的 MetingAPI
-https://api.wuenci.com/meting/api/
-
-作者: imsyy
-主页：https://www.imsyy.top/
-GitHub：https://github.com/imsyy/home
-版权所有，请勿删除
-*/
-let server = "netease"; //netease: 网易云音乐; tencent: QQ音乐; kugou: 酷狗音乐; xiami: 虾米; kuwo: 酷我
-let type = "playlist"; //song: 单曲; playlist: 歌单; album: 唱片
-let id = "6851165811"; //封面 ID / 单曲 ID / 歌单 ID
+///////////////////////////////
+// ========= music ========= //
+///////////////////////////////
 
 $.ajax({
-    url: "https://api.wuenci.com/meting/api/?server=" + server + "&type=" + type + "&id=" + id,
-    type: "GET",
-    dataType: "JSON",
-    success: function (data) {
+      url: "js/music/music-data.json",
+      type: "GET",
+      dataType: "JSON",
+      success: function (data) {
         const ap = new APlayer({
-            container: document.getElementById('aplayer'),
-            order: 'random',
-            preload: 'auto',
-            listMaxHeight: '336px',
-            volume: '0.5',
-            mutex: true,
-            lrcType: 3,
-            audio: data,
+          container: document.getElementById('aplayer'),
+          order: 'random',
+          preload: 'auto',
+          listMaxHeight: '336px',
+          volume: '0.5',
+          mutex: true,
+          lrcType: 3,
+          audio: data,
         });
+
 
         /* 底栏歌词 */
         setInterval(function () {
@@ -145,7 +135,7 @@ $.ajax({
                 timeout: 8000,
                 icon: "fa-solid fa-circle-exclamation",
                 displayMode: 'replace',
-                message: '音乐播放器加载失败'
+                message: '音乐播放器加载失败XwX'
             });
         }, 3800);
     }
