@@ -14,6 +14,48 @@
       "lrc": "js/music/若以止白 - 【薛晓】他梦星尘（Cover 日本ACG）.lrc"
     },
     {
+      "name": "乌篷谣",
+      "artist": "小曲儿",
+      "url": "js/music/乌篷谣 - 小曲儿.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/乌篷谣 - 小曲儿.lrc"
+    },
+    {
+      "name": "柒寒",
+      "artist": "红烧の爆鱼、天時",
+      "url": "js/music/柒寒 - 红烧の爆鱼、天時.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/柒寒 - 红烧の爆鱼、天時.lrc"
+    },
+    {
+      "name": "凤来仪",
+      "artist": "虚幻幻",
+      "url": "js/music/虚幻幻 - 凤来仪.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/虚幻幻 - 凤来仪.lrc"
+    },
+    {
+      "name": "不记年",
+      "artist": "妖言君",
+      "url": "js/music/不记年 - 妖言君.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/不记年 - 妖言君.lrc"
+    },
+    {
+      "name": "风月无边",
+      "artist": "晃儿",
+      "url": "js/music/风月无边 - 晃儿.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/风月无边 - 晃儿.lrc"
+    },
+    {
+      "name": "听风无涯",
+      "artist": "Winky诗",
+      "url": "js/music/听风无涯 - Winky诗.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/听风无涯 - Winky诗.lrc"
+    },
+    {
       "name": "千灯愿——《天官赐福》花怜同人",
       "artist": "陌九",
       "url": "js/music/千灯愿——《天官赐福》花怜同人 - 陌九.flac",
@@ -42,11 +84,25 @@
       "lrc": "js/music/银临 - 问琴.lrc"
     },
     {
+      "name": "千秋迭梦",
+      "artist": "阿YueYue、镜予歌",
+      "url": "js/music/阿YueYue、镜予歌 - 千秋迭梦.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/阿YueYue、镜予歌 - 千秋迭梦.lrc"
+    },
+    {
       "name": "与君知——《天官赐福》花怜原创同人曲",
       "artist": "李蚊香",
       "url": "js/music/李蚊香 - 与君知——《天官赐福》花怜原创同人曲.flac",
       "cover": "img/logo.png",
       "lrc": "js/music/李蚊香 - 与君知——《天官赐福》花怜原创同人曲.lrc"
+    },
+    {
+      "name": "醉倾山河",
+      "artist": "青峰AomineDaiky、水云汐Camus",
+      "url": "js/music/青峰AomineDaiky、水云汐Camus - 醉倾山河.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/青峰AomineDaiky、水云汐Camus - 醉倾山河.lrc"
     },
     {
       "name": "雁城雪",
@@ -89,6 +145,34 @@
       "url": "js/music/括号君 - 【魔道祖师】盲（广播剧版）.mp3",
       "cover": "img/logo.png",
       "lrc": "js/music/括号君 - 【魔道祖师】盲（广播剧版）.lrc"
+    },
+    {
+      "name": "【何以歌】古筝（纯筝）",
+      "artist": "崔江卉",
+      "url": "js/music/【何以歌】古筝（纯筝） - 崔江卉.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/【何以歌】古筝（纯筝） - 崔江卉.lrc"
+    },
+    {
+      "name": "《岂吟叹》 ——《天官赐福》女性角色群像",
+      "artist": "漆柚;长平;池年;慕芸生;管莫书;若以止白",
+      "url": "js/music/漆柚;长平;池年;慕芸生;管莫书;若以止白 - 《岂吟叹》 ——《天官赐福》女性角色群像.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/漆柚;长平;池年;慕芸生;管莫书;若以止白 - 《岂吟叹》 ——《天官赐福》女性角色群像.lrc"
+    },
+    {
+      "name": "不肯赦当年【纯歌版】（Cover 上弦之月）",
+      "artist": "Autumn绅",
+      "url": "js/music/Autumn绅 - 不肯赦当年【纯歌版】（Cover 上弦之月）.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/Autumn绅 - 不肯赦当年【纯歌版】（Cover 上弦之月）.lrc"
+    },
+    {
+      "name": "错逢（魔道祖师·薛晓同人）",
+      "artist": "紫依_七弦剑吟",
+      "url": "js/music/紫依_七弦剑吟 - 错逢（魔道祖师·薛晓同人）.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/紫依_七弦剑吟 - 错逢（魔道祖师·薛晓同人）.lrc"
     },
     {
       "name": "诸事莫问——广播剧《督主有病》主题曲",

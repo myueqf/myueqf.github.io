@@ -82,19 +82,21 @@ setTimeout(function () {
     $('#loading-text').html("一会，再一会就好啦～别急嘛QwQ")
 }, 3000);
 
-// 新春灯笼 （ 需要时可取消注释 ）
-// new_element=document.createElement("link");
-// new_element.setAttribute("rel","stylesheet");
-// new_element.setAttribute("type","text/css");
-// new_element.setAttribute("href","./css/lantern.css");
-// document.body.appendChild(new_element);
+// ============ 新春灯笼 （ 需要时可取消注释 ） ==========
+/*
+new_element=document.createElement("link");
+new_element.setAttribute("rel","stylesheet");
+new_element.setAttribute("type","text/css");
+new_element.setAttribute("href","./css/lantern.css");
+document.body.appendChild(new_element);
+new_element=document.createElement("script");
+new_element.setAttribute("type","text/javascript");
+new_element.setAttribute("src","./js/lantern.js");
+document.body.appendChild(new_element);
+*/
+// ==================================================
 
-// new_element=document.createElement("script");
-// new_element.setAttribute("type","text/javascript");
-// new_element.setAttribute("src","./js/lantern.js");
-// document.body.appendChild(new_element);
-
-//获取一言
+// ================ 获取一言(旧) ======================
 //fetch('https://v1.hitokoto.cn?max_length=24')
 //    .then(response => response.json())
 //    .then(data => {
@@ -128,9 +130,9 @@ setTimeout(function () {
 //        });
 //    }
 //});
+// ==========================================================
 
-
-// 一言～
+// ==================== 一言～ ========================
 const hitokotoArray = [
     ["天官赐福", "为你战死，是我至高无上的荣耀。"],
     ["七芒星", "撕开云雾，你就是光"],
@@ -229,11 +231,11 @@ $('#hitokoto').click(function () {
         });
     }
 });
+// ========================================================
 
 
 
-
-//获取天气
+// ========================= 获取天气 ======================
 //请前往 https://www.mxnzp.com/doc/list 申请 app_id 和 app_secret
 //请前往 https://dev.qweather.com/ 申请 key
 //const add_id = "wrknltonr0foslhs"; // app_id
@@ -289,6 +291,7 @@ $('#hitokoto').click(function () {
 //        });
 //    }
 //});
+// =======================================================
 
 //获取时间
 let t = null;
@@ -318,7 +321,7 @@ function time() {
     t = setTimeout(time, 1000);
 }
 
-//链接提示文字
+//================= 链接提示文字 ==================
 $("#social").mouseover(function () {
     $("#social").css({
         "background": "rgb(0 0 0 / 25%)",
@@ -364,8 +367,9 @@ $("#telegram").mouseover(function () {
 }).mouseout(function () {
     $("#link-text").html("通过这里联系我");
 });
+// =================================================
 
-//自动变灰
+// ================= 自动变灰 ==================
 //let myDate = new Date;
 //let mon = myDate.getMonth() + 1;
 //let date = myDate.getDate();
@@ -389,6 +393,7 @@ $("#telegram").mouseover(function () {
 //        }, false);
 //    }
 //}
+// =================================================
 
 //更多页面切换
 let shoemore = false;
@@ -397,11 +402,11 @@ $('#switchmore').on('click', function () {
     if (shoemore && $(document).width() >= 990) {
         $('#container').attr('class', 'container mores');
         $("#change").html("Oops&nbsp;!");
-        $("#change1").html("哎呀，这都被你发现了（ 再点击一次可关闭 ）");
+        $("#change1").html("猫猫探头(=^･ω･^=) 「再点击一次可关闭」");
     } else {
         $('#container').attr('class', 'container');
         $("#change").html("Hello&nbsp;World&nbsp;!");
-        $("#change1").html("一个建立于 21 世纪的小站，存活于互联网的边缘");
+        $("#change1").html("(∠・ω< )⌒☆");
     }
 });
 
@@ -450,7 +455,7 @@ window.addEventListener('load', function () {
             //移动端隐藏更多页面
             $('#container').attr('class', 'container');
             $("#change").html("Hello&nbsp;World&nbsp;!");
-            $("#change1").html("一个建立于 21 世纪的小站，存活于互联网的边缘");
+            $("#change1").html("猫猫探头(=^･ω･^=)");
 
             //移动端隐藏弹窗页面
             $('#box').css("display", "none");
@@ -504,10 +509,12 @@ color: rgb(30,152,255);
 `
 let title1 = '真的有人会注意到这一行字嘛？'
 let title2 = `
-#
+////////////////////////////////////////
+// ========= 明月清風の小窝 ========= //
+////////////////////////////////////////
 `
 let content = `
-#
+(∠・ω< )⌒☆
 `
 console.log(`%c${title1} %c${title2}
 %c${content}`, styleTitle1, styleTitle2, styleContent)
