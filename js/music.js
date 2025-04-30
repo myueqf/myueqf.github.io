@@ -3,7 +3,7 @@
 ///////////////////////////////
 
 $.ajax({
-      url: "js/music/music-data.json",
+      url: "js/music/music_list.json",
       type: "GET",
       dataType: "JSON",
       success: function (data) {

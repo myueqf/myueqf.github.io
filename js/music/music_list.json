@@ -1,0 +1,23 @@
+[
+    {
+      "name": "照梦【渣反·冰九纯歌版】",
+      "artist": "雨泞老爷、雁心社",
+      "url": "js/music/雨泞老爷、雁心社 - 照梦【渣反·冰九纯歌版】.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/雨泞老爷、雁心社 - 照梦【渣反·冰九纯歌版】.lrc"
+    },
+    {
+      "name": "雁城雪",
+      "artist": "小爱的妈",
+      "url": "js/music/雁城雪 - 小爱的妈.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/雁城雪 - 小爱的妈.lrc"
+    },
+    {
+      "name": "问情",
+      "artist": "陈亦洺 / 尚辰",
+      "url": "js/music/问情.flac",
+      "cover": "img/logo.png",
+      "lrc": "js/music/问情.lrc"
+    }
+]
