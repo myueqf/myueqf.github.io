@@ -7,11 +7,95 @@
       "lrc": "js/music/雨泞老爷、雁心社 - 照梦【渣反·冰九纯歌版】.lrc"
     },
     {
+      "name": "【薛晓】他梦星尘（Cover 日本ACG）",
+      "artist": "若以止白",
+      "url": "js/music/若以止白 - 【薛晓】他梦星尘（Cover 日本ACG）.flac",
+      "cover": "img/logo.png",
+      "lrc": "js/music/若以止白 - 【薛晓】他梦星尘（Cover 日本ACG）.lrc"
+    },
+    {
+      "name": "千灯愿——《天官赐福》花怜同人",
+      "artist": "陌九",
+      "url": "js/music/千灯愿——《天官赐福》花怜同人 - 陌九.flac",
+      "cover": "img/logo.png",
+      "lrc": "js/music/千灯愿——《天官赐福》花怜同人 - 陌九.lrc"
+    },
+    {
+      "name": "羡云",
+      "artist": "HITA",
+      "url": "js/music/羡云 - HITA.flac",
+      "cover": "img/logo.png",
+      "lrc": "js/music/羡云 - HITA.lrc"
+    },
+    {
+      "name": "无故之秋",
+      "artist": "卡修Rui",
+      "url": "js/music/无故之秋 - 卡修Rui.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/无故之秋 - 卡修Rui.lrc"
+    },
+    {
+      "name": "问琴",
+      "artist": "银临",
+      "url": "js/music/银临 - 问琴.flac",
+      "cover": "img/logo.png",
+      "lrc": "js/music/银临 - 问琴.lrc"
+    },
+    {
+      "name": "与君知——《天官赐福》花怜原创同人曲",
+      "artist": "李蚊香",
+      "url": "js/music/李蚊香 - 与君知——《天官赐福》花怜原创同人曲.flac",
+      "cover": "img/logo.png",
+      "lrc": "js/music/李蚊香 - 与君知——《天官赐福》花怜原创同人曲.lrc"
+    },
+    {
       "name": "雁城雪",
       "artist": "小爱的妈",
       "url": "js/music/雁城雪 - 小爱的妈.mp3",
       "cover": "img/logo.png",
       "lrc": "js/music/雁城雪 - 小爱的妈.lrc"
+    },
+    {
+      "name": "栖枝",
+      "artist": "双笙（陈元汐）",
+      "url": "js/music/栖枝 - 双笙（陈元汐）.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/栖枝 - 双笙（陈元汐）.lrc"
+    },
+    {
+      "name": "不羡明月知",
+      "artist": "封茗囧菌",
+      "url": "js/music/不羡明月知 - 封茗囧菌.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/不羡明月知 - 封茗囧菌.lrc"
+    },
+    {
+      "name": "醉梦前尘",
+      "artist": "林志炫",
+      "url": "js/music/醉梦前尘 - 林志炫.flac",
+      "cover": "img/logo.png",
+      "lrc": "js/music/醉梦前尘 - 林志炫.lrc"
+    },
+    {
+      "name": "【魔道祖师】盲（纯歌版）",
+      "artist": "括号君",
+      "url": "js/music/括号君 - 【魔道祖师】盲（纯歌版）.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/括号君 - 【魔道祖师】盲（纯歌版）.lrc"
+    },
+    {
+      "name": "【魔道祖师】盲（广播剧版）",
+      "artist": "括号君",
+      "url": "js/music/括号君 - 【魔道祖师】盲（广播剧版）.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/括号君 - 【魔道祖师】盲（广播剧版）.lrc"
+    },
+    {
+      "name": "诸事莫问——广播剧《督主有病》主题曲",
+      "artist": "远皓ZIL / 路扬",
+      "url": "js/music/诸事莫问——广播剧《督主有病》主题曲.flac",
+      "cover": "img/logo.png",
+      "lrc": "js/music/诸事莫问——广播剧《督主有病》主题曲.lrc"
     },
     {
       "name": "问情",

@@ -1,4 +1,6 @@
-
+//////////////////////////////
+// ========= main ========= //
+//////////////////////////////
 //弹窗样式
 iziToast.settings({
     timeout: 10000,
@@ -422,7 +424,7 @@ $('#switchmenu').on('click', function () {
 });
 
 //更多弹窗页面
-$('#openmore').on('click', function () {
+$('#openmore,#link-url-3').on('click', function () {
     $('#box').css("display", "block");
     $('#row').css("display", "none");
     $('#more').css("cssText", "display:none !important");
