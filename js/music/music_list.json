@@ -77,6 +77,41 @@
       "lrc": "js/music/风月无边 - 晃儿.lrc"
     },
     {
+      "name": "【魔道祖师江澄】轻鸿行",
+      "artist": "裂天",
+      "url": "js/music/裂天 - 【魔道祖师江澄】轻鸿行.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/裂天 - 【魔道祖师江澄】轻鸿行.lrc"
+    },
+    {
+      "name": "春野旧城",
+      "artist": "灰白、齐栾",
+      "url": "js/music/灰白、齐栾 - 春野旧城.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/灰白、齐栾 - 春野旧城.lrc"
+    },
+    {
+      "name": "渡人间——《二哈和他的白猫师尊》燃晚原创同人曲",
+      "artist": "魏潇逸 / Babystop_山竹 / 解忧草",
+      "url": "js/music/渡人间——《二哈和他的白猫师尊》燃晚原创同人曲.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/渡人间——《二哈和他的白猫师尊》燃晚原创同人曲.lrc"
+    },
+    {
+      "name": "③相思为疾（广播剧《君有疾否》插曲）",
+      "artist": "易者连消醉清酒;亡海Aries",
+      "url": "js/music/易者连消醉清酒;亡海Aries - ③相思为疾（广播剧《君有疾否》插曲）.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/易者连消醉清酒;亡海Aries - ③相思为疾（广播剧《君有疾否》插曲）.lrc"
+    },
+    {
+      "name": "人世终白首-《魔道祖师》忘羡同人曲",
+      "artist": "月狸li、House_何岳城",
+      "url": "js/music/人世终白首-《魔道祖师》忘羡同人曲.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/人世终白首-《魔道祖师》忘羡同人曲.lrc"
+    },
+    {
       "name": "怎配",
       "artist": "镜予歌、喧笑、陈亦洺",
       "url": "js/music/镜予歌、喧笑、陈亦洺 - 怎配.mp3",
@@ -145,6 +180,13 @@
       "url": "js/music/李蚊香 - 与君知——《天官赐福》花怜原创同人曲.flac",
       "cover": "img/logo.png",
       "lrc": "js/music/李蚊香 - 与君知——《天官赐福》花怜原创同人曲.lrc"
+    },
+    {
+      "name": "似我非我《天官赐福》君吾同人曲",
+      "artist": "王老九",
+      "url": "js/music/似我非我《天官赐福》君吾同人曲 - 王老九.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/似我非我《天官赐福》君吾同人曲 - 王老九.lrc"
     },
     {
       "name": "醉倾山河",
