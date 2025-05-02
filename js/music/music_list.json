@@ -7,6 +7,27 @@
       "lrc": "js/music/雨泞老爷、雁心社 - 照梦【渣反·冰九纯歌版】.lrc"
     },
     {
+      "name": "栖枝",
+      "artist": "双笙（陈元汐）",
+      "url": "js/music/栖枝 - 双笙（陈元汐）.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/栖枝 - 双笙（陈元汐）.lrc"
+    },
+    {
+      "name": "将厌离(纯歌版)",
+      "artist": "林斜阳",
+      "url": "js/music/林斜阳 - 将厌离(纯歌版).mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/林斜阳 - 将厌离(纯歌版).lrc"
+    },
+    {
+      "name": "霜降恰旧年——晓薛晓无差同人曲",
+      "artist": "鹤森Mori",
+      "url": "js/music/鹤森Mori - 霜降恰旧年——晓薛晓无差同人曲.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/鹤森Mori - 霜降恰旧年——晓薛晓无差同人曲.lrc"
+    },
+    {
       "name": "【薛晓】他梦星尘（Cover 日本ACG）",
       "artist": "若以止白",
       "url": "js/music/若以止白 - 【薛晓】他梦星尘（Cover 日本ACG）.flac",
@@ -42,11 +63,39 @@
       "lrc": "js/music/不记年 - 妖言君.lrc"
     },
     {
+      "name": "念平生",
+      "artist": "司夏",
+      "url": "js/music/念平生 - 司夏.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/念平生 - 司夏.lrc"
+    },
+    {
       "name": "风月无边",
       "artist": "晃儿",
       "url": "js/music/风月无边 - 晃儿.mp3",
       "cover": "img/logo.png",
       "lrc": "js/music/风月无边 - 晃儿.lrc"
+    },
+    {
+      "name": "怎配",
+      "artist": "镜予歌、喧笑、陈亦洺",
+      "url": "js/music/镜予歌、喧笑、陈亦洺 - 怎配.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/镜予歌、喧笑、陈亦洺 - 怎配.lrc"
+    },
+    {
+      "name": "晚夜微雨问海棠（女声高燃版）",
+      "artist": "五毛,你木木君joon",
+      "url": "js/music/晚夜微雨问海棠（女声高燃版）-五毛,你木木君joon.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/晚夜微雨问海棠（女声高燃版）-五毛,你木木君joon.lrc"
+    },
+    {
+      "name": "晚夜微雨问海棠",
+      "artist": "镜予歌、喧笑、陈亦洺",
+      "url": "js/music/镜予歌、喧笑、陈亦洺 - 晚夜微雨问海棠.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/镜予歌、喧笑、陈亦洺 - 晚夜微雨问海棠.lrc"
     },
     {
       "name": "听风无涯",
@@ -105,18 +154,25 @@
       "lrc": "js/music/青峰AomineDaiky、水云汐Camus - 醉倾山河.lrc"
     },
     {
+      "name": "【恶友】牡丹花下死—薛洋／金光瑶（翻自 任宰范）",
+      "artist": "若以止白",
+      "url": "js/music/【恶友】牡丹花下死—薛洋／金光瑶（翻自 任宰范） - 若以止白.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/【恶友】牡丹花下死—薛洋／金光瑶（翻自 任宰范） - 若以止白.lrc"
+    },
+    {
+      "name": "应怀酒《人渣反派自救系统》沈九同人曲",
+      "artist": "司南",
+      "url": "js/music/司南 - 应怀酒《人渣反派自救系统》沈九同人曲.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/司南 - 应怀酒《人渣反派自救系统》沈九同人曲.lrc"
+    },
+    {
       "name": "雁城雪",
       "artist": "小爱的妈",
       "url": "js/music/雁城雪 - 小爱的妈.mp3",
       "cover": "img/logo.png",
       "lrc": "js/music/雁城雪 - 小爱的妈.lrc"
-    },
-    {
-      "name": "栖枝",
-      "artist": "双笙（陈元汐）",
-      "url": "js/music/栖枝 - 双笙（陈元汐）.mp3",
-      "cover": "img/logo.png",
-      "lrc": "js/music/栖枝 - 双笙（陈元汐）.lrc"
     },
     {
       "name": "不羡明月知",
@@ -180,6 +236,13 @@
       "url": "js/music/诸事莫问——广播剧《督主有病》主题曲.flac",
       "cover": "img/logo.png",
       "lrc": "js/music/诸事莫问——广播剧《督主有病》主题曲.lrc"
+    },
+    {
+      "name": "赴人间《提灯映桃花》广播剧主题曲",
+      "artist": "五音Jw",
+      "url": "js/music/赴人间《提灯映桃花》广播剧主题曲 - 五音Jw.flac",
+      "cover": "img/logo.png",
+      "lrc": "js/music/赴人间《提灯映桃花》广播剧主题曲 - 五音Jw.lrc"
     },
     {
       "name": "问情",
