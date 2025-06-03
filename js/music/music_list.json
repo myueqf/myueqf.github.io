@@ -91,6 +91,13 @@
       "lrc": "js/music/灰白、齐栾 - 春野旧城.lrc"
     },
     {
+      "name": "回响",
+      "artist": "无限循环MDZS、吾恩",
+      "url": "js/music/回响 - 吾恩.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/回响 - 吾恩.lrc"
+    },
+    {
       "name": "海棠又落微雨时",
       "artist": "陈亦洺、墨臻",
       "url": "js/music/海棠又落微雨时 - 陈亦洺、墨臻.mp3",
