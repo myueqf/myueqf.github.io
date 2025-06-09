@@ -224,6 +224,20 @@
       "lrc": "js/music/司南 - 应怀酒《人渣反派自救系统》沈九同人曲.lrc"
     },
     {
+      "name": "与君长相见（《人渣反派自救系统》同人曲）",
+      "artist": "硕猗",
+      "url": "js/music/与君长相见（《人渣反派自救系统》同人曲） - 硕猗.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/与君长相见（《人渣反派自救系统》同人曲） - 硕猗.lrc"
+    },
+    {
+      "name": "与君长相见（剧情版）",
+      "artist": "硕猗",
+      "url": "js/music/与君长相见（剧情版） - 硕猗.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/与君长相见（剧情版） - 硕猗.lrc"
+    },
+    {
       "name": "雁城雪",
       "artist": "小爱的妈",
       "url": "js/music/雁城雪 - 小爱的妈.mp3",
