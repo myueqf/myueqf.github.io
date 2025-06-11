@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             bookListContainer.innerHTML = ''; 
             
             if (books.length === 0) {
-                bookListContainer.innerHTML = '<p class="loading-message">暂无书籍可供下载。</p>';
+                bookListContainer.innerHTML = '<p class="loading-message">没有书籍似乎。。。猫猫哭哭QAQ</p>';
                 return;
             }
 
@@ -50,6 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
             console.error('Error loading the book list:', error);
-            bookListContainer.innerHTML = '<p class="loading-message" style="color: red;">加载书籍列表失败，请稍后再试。</p>';
+            bookListContainer.innerHTML = '<p class="loading-message" style="color: red;">内容被猫猫叼走啦。。。</p>';
         });
 });
