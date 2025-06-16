@@ -176,8 +176,15 @@
                                     <!--时间-->
                                     <div class="time cards" id="upWeather">
                                         <div class="timeshow" id="time">
-                                            2000&nbsp;年&nbsp;0&nbsp;月&nbsp;00&nbsp;日&nbsp;<span
+                                            0000&nbsp;年&nbsp;0&nbsp;月&nbsp;00&nbsp;日&nbsp;<span
                                                 class="weekday">星期一</span><br><span class="time-text">00:00:00</span>
+                                        </div>
+                                        <div class="weather">
+                                            <!-- 农历和时辰XwX -->
+                                            <span id="lunar_month_text"></span>
+                                            <span id="text">月</span>
+                                            <span id="lunar_day_text"></span>&nbsp;
+                                            <span id="shi_chen_text"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -464,9 +471,9 @@
     <script type="text/javascript" src="./js/time.js"></script>
     <script type="text/javascript" src="./js/js.cookie.js"></script>
     <script type="text/javascript" src="./js/seededRandom.js"></script>
-    <script type="text/javascript"
-        src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/js/bootstrap.min.js">
-    </script>
+    <script type="text/javascript" src="./js/lunar.js"></script>
+    <script type="text/javascript" src="./js/displayLunar.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
 </body>
 
 </html>
