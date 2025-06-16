@@ -22,7 +22,7 @@ function getShiChen() {
     const hour = now.getHours();
     const minute = now.getMinutes();
 
-    // 定义时辰映射表，包含时辰名称和其对应的起始小时（左闭右开区间）
+    // 时辰表
     const shiChenMap = [
         { name: '子时', start: 23, end: 1 },  // 23:00 - 0:59
         { name: '丑时', start: 1, end: 3 },  // 1:00 - 2:59
