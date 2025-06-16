@@ -85,5 +85,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(function() {
         shiChenElement.textContent = getShiChen();
-    }, 60 * 1000);
+    }, 5 * 60 * 1000);
 });
