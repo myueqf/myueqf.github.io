@@ -42,7 +42,6 @@ function setBgImgInit() {
             const day = today.getDate();
             const finalNumber = window.getSeededRandomNumber(month, day, 1, 23);
             $('#bg').attr('src', `./img/background/2/${finalNumber}.jpg`); // 每日一图
-            console.log(`Case 2: Daily image. Date: ${year}-${month}-${day}, Image number: ${finalNumber}`);
             break;
         case "3":
             $('#bg').attr('src', `./img/background/0/${1 + ~~(Math.random() * 6)}.jpg`); // 扩展图集0
@@ -64,7 +63,7 @@ $(document).ready(function () {
         iziToast.show({
             icon: "fa-solid fa-image",
             timeout: 2500,
-            message: '壁纸设置成功，刷新后生效',
+            message: '壁纸设置成功，刷新后生效~',
         });
         setBgImg(bg_img);
     });
