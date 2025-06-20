@@ -1,21 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     const bookListContainer = document.getElementById('bookList');
-    const jsonUrl = 'js/booklist.json';
+    const jsonUrls = [
+        'js/booklist.json',
+        'js/booklist1.json'
+    ];
 
-    // 异步加载JSON
-    fetch(jsonUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(books => {
+    const fetchPromises = jsonUrls.map(url =>
+        fetch(url).then(response => response.json())
+    );
+
+    Promise.all(fetchPromises)
+        .then(results => {
+            const books = results.flat();
             // 清空加载消息
-            bookListContainer.innerHTML = ''; 
-            
+            bookListContainer.innerHTML = '';
+
             if (books.length === 0) {
-                bookListContainer.innerHTML = '<p class="loading-message">没有书籍似乎。。。猫猫哭哭QAQ</p>';
+                bookListContainer.innerHTML = '<p class="loading-message">没有找到书籍。。猫猫哭哭QAQ</p>';
                 return;
             }
 
