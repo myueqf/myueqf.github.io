@@ -100,6 +100,9 @@ end
 {end}
 
 {script:main.3}
+result: alert["Aww are you really suuure about this? QwQ" "bool" "Yes..."]
+
+if result
 on oval pos size do
  flip pos+size*flip unit 2*pi*(range 20)/20
 end
@@ -137,6 +140,7 @@ on click do
  target.pos:dims.pos
  target.size:dims.size
  each f in target.frames f.map[() 0] end
+end
 end
 {end}
 
