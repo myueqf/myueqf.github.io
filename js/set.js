@@ -21,10 +21,7 @@ function getBgImg() {
 }
 
 let bg_img_preinstall = {
-    "type": "1", // 1:默认背景 2:每日一图 3:扩展图集0 4:扩展图集1
-    "2": "#", // 每日一图
-    "3": "#", // 扩展图集0
-    "4": "#"  // 扩展图集1
+    "type": "1" // 1:默认背景 2:每日一图 3:扩展图集0 4:扩展图集1
 };
 
 // 更改背景图片
@@ -47,7 +44,10 @@ function setBgImgInit() {
             $('#bg').attr('src', `./img/background/0/${1 + ~~(Math.random() * 6)}.jpg`); // 扩展图集0
             break;
         case "4":
-            $('#bg').attr('src', `./img/background/1/${1 + ~~(Math.random() * 10)}.jpg`); // 扩展图集1
+            $('#bg').attr('src', `./img/background/1/${1 + ~~(Math.random() * 11)}.jpg`); // 扩展图集1
+            break;
+        case "5":
+            $('#bg').attr('src', `./img/background/swy/${210001 + ~~(Math.random() * 75)}.webp`); // 扩展图集2（暂时）
             break;
     }
 };
