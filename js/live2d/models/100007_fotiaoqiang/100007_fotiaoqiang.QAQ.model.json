@@ -1,0 +1,21 @@
+{
+    "expression": [
+        {
+            "file": "expression/nanguo.exp.json",
+            "name": "nanguo.exp.json"
+        }
+    ],
+    "model": "model.moc",
+    "motions": {
+        "idle": [
+            {
+                "file": "action/chenglian.mtn"
+            }
+        ]
+    },
+    "textures": [
+        "texture_00.png"
+    ],
+    "physics": "moc/physics.json",
+    "version": "Sample 1.0.0"
+}

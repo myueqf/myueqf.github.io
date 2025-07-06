@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <script src="https://myueqf.github.io/js/live2d/live2d.min.js"></script>
+    <style>
+        /* 字体设置 */
+        @font-face {
+            font-family: 'AaCute';
+            src: url('https://myueqf.github.io/ebook/font/AaCute.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'AaCute', "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+            position: relative;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+        
+        /* 暗色背景遮盖层 */
+        .dark-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        
+        /* 主容器 */
+        .main-container {
+            width: 100%;
+            margin-top: 10vh;
+            margin-bottom: auto;
+            display: flex;
+            justify-content: center;
+        }
+        
+        /* 毛玻璃容器 */
+        .frosted-container {
+            width: 100vw;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 内容容器 */
+        .content-wrapper {
+            width: 100%;
+            max-width: 800px;
+            padding: 0 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 60px;
+            font-weight: 100;
+            margin: 0 0 20px 0;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+        
+        p {
+            margin: 20px 0;
+            line-height: 1.6;
+            font-size: 18px;
+            text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+        
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        
+        a {
+            color: #a8d8ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        #suggestions {
+            margin-top: 35px;
+            color: #ccc;
+        }
+        #suggestions a {
+            color: #ddd;
+            font-weight: 200;
+            font-size: 14px;
+            margin: 0 10px;
+        }
+        
+        .logo {
+            display: block;
+            margin: 35px auto 0;
+            text-align: center;
+        }
+        .logo img {
+            width: 32px;
+            height: 32px;
+        }
+        
+        @media (max-width: 800px) {
+            .frosted-container {
+                padding: 30px 0;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景图片容器 -->
+    <img id="bg" style="display:none;" alt="bg_img">
+    <div class="dark-overlay"></div>
+    <div class="main-container">
+        <div class="frosted-container">
+            <div class="content-wrapper">
+                <h1>404</h1>
+                <p><strong>找不到页面</strong></p>
+                
+                <p>
+                    这个地址配置的站点不包含请求的文件。
+                </p>
+                
+                <p>
+                    如果这是您的站点，请确保文件名大小写与URL匹配，
+                    以及任何文件权限。<br>
+                    对于根URL（如<code>https://example.com/</code>），
+                    您必须提供一个<code>index.html</code>文件。
+                </p>
+                
+                <p>
+                    <a href="https://help.github.com/pages/">阅读完整文档</a>
+                    了解更多关于使用<strong>GitHub Pages</strong>的信息。
+                </p>
+                
+                <div id="suggestions">
+                    <a href="https://githubstatus.com/">GitHub Status</a> —
+                    <a href="https://twitter.com/githubstatus">@githubstatus</a>
+                </div>
+                
+                <a href="https://myueqf.github.io/" class="logo">
+                    <img src="https://myueqf.github.io/img/logo.png" alt="Logo">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="https://myueqf.github.io/js/seededRandom.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date();
+            const month = today.getMonth() + 1;
+            const day = today.getDate();
+            /* 每日一图 */
+            const finalNumber = window.getSeededRandomNumber(month, day, 210001, 210075);
+            const bgUrl = `https://myueqf.github.io/img/background/swy/${finalNumber}.webp`;
+            document.body.style.backgroundImage = `url(${bgUrl})`;
+            const bgImg = document.getElementById('bg');
+            bgImg.src = bgUrl;
+        });
+    </script>
+    <!-- live2d_config -->
+    <script>
+        // 初始化Live2D模型
+        OML2D.loadOml2d({
+          models: [{
+            path: "https://myueqf.github.io/js/live2d/models/100007_fotiaoqiang/100007_fotiaoqiang.QAQ.model.json"
+          }],
+          mobileDisplay: true,
+          dockedPosition: "right", // 靠右显示
+          menus: { disable: true },
+          tips: { disable: true },
+          statusBar: { disable: true }
+        });
+    </script>
+</body>
+</html>
