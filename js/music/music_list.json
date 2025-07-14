@@ -63,6 +63,13 @@
       "lrc": "js/music/柒寒 - 红烧の爆鱼、天時.lrc"
     },
     {
+      "name": "松烟入墨",
+      "artist": "伦桑、小义学长、李蚊香、满汉全席",
+      "url": "js/music/松烟入墨 - 伦桑、小义学长、李蚊香、满汉全席.opus",
+      "cover": "img/logo.png",
+      "lrc": "js/music/松烟入墨 - 伦桑、小义学长、李蚊香、满汉全席.lrc"
+    },
+    {
       "name": "凤来仪",
       "artist": "虚幻幻",
       "url": "js/music/虚幻幻 - 凤来仪.mp3",
@@ -89,6 +96,27 @@
       "url": "js/music/风月无边 - 晃儿.mp3",
       "cover": "img/logo.png",
       "lrc": "js/music/风月无边 - 晃儿.lrc"
+    },
+    {
+      "name": "一载百味（《食物语》手游一周年群像曲）",
+      "artist": "排骨教主、三无MarBlue、KBShinya、音频怪物、李常超 (Lao乾妈)、奇然、王胖子、五音Jw、泥鳅Niko",
+      "url": "js/music/一载百味（《食物语》手游一周年群像曲） - 排骨教主、三无MarBlue、KBShinya、音频怪物、李常超 (Lao乾妈)、奇然、王胖子、五音Jw、泥鳅Niko.opus",
+      "cover": "img/logo.png",
+      "lrc": "js/music/一载百味（《食物语》手游一周年群像曲） - 排骨教主、三无MarBlue、KBShinya、音频怪物、李常超 (Lao乾妈)、奇然、王胖子、五音Jw、泥鳅Niko.lrc"
+    },
+    {
+      "name": "肆时家书——《食物语》手游四周年主题曲",
+      "artist": "喵叽娆",
+      "url": "js/music/肆时家书——《食物语》手游四周年主题曲 - 喵叽娆.opus",
+      "cover": "img/logo.png",
+      "lrc": "js/music/肆时家书——《食物语》手游四周年主题曲 - 喵叽娆.lrc"
+    },
+    {
+      "name": "再逢烟火时（《食物语》手游二周年主题纪念曲）",
+      "artist": "慕寒、哦漏、吾恩、小坠、Mario、奇然、沈谧仁、白止",
+      "url": "js/music/再逢烟火时（《食物语》手游二周年主题纪念曲） - 慕寒、哦漏、吾恩、小坠、Mario、奇然、沈谧仁、白止.opus",
+      "cover": "img/logo.png",
+      "lrc": "js/music/再逢烟火时（《食物语》手游二周年主题纪念曲） - 慕寒、哦漏、吾恩、小坠、Mario、奇然、沈谧仁、白止.lrc"
     },
     {
       "name": "【魔道祖师江澄】轻鸿行",
@@ -252,6 +280,13 @@
       "lrc": "js/music/青峰AomineDaiky、水云汐Camus - 醉倾山河.lrc"
     },
     {
+      "name": "《一眼万年》主役版（广播剧《天官赐福》第三季·插曲）",
+      "artist": "苏尚卿、陈张太康",
+      "url": "js/music/《一眼万年》主役版（广播剧《天官赐福》第三季·插曲） - 苏尚卿、陈张太康.opus",
+      "cover": "img/logo.png",
+      "lrc": "js/music/《一眼万年》主役版（广播剧《天官赐福》第三季·插曲） - 苏尚卿、陈张太康.lrc"
+    },
+    {
       "name": "【恶友】牡丹花下死—薛洋／金光瑶（翻自 任宰范）",
       "artist": "若以止白",
       "url": "js/music/【恶友】牡丹花下死—薛洋／金光瑶（翻自 任宰范） - 若以止白.mp3",
@@ -264,6 +299,13 @@
       "url": "js/music/司南 - 应怀酒《人渣反派自救系统》沈九同人曲.mp3",
       "cover": "img/logo.png",
       "lrc": "js/music/司南 - 应怀酒《人渣反派自救系统》沈九同人曲.lrc"
+    },
+    {
+      "name": "渣反DISICO（翻自 洛天依）",
+      "artist": "寒荔戴斗笠、庭庭、莫循，、夏野菌",
+      "url": "js/music/寒荔戴斗笠、庭庭、莫循，、夏野菌 - 渣反DISICO（翻自 洛天依）.mp3",
+      "cover": "img/logo.png",
+      "lrc": "js/music/寒荔戴斗笠、庭庭、莫循，、夏野菌 - 渣反DISICO（翻自 洛天依）.lrc"
     },
     {
       "name": "惊眠（《人渣反派自救系统》冰秋同人曲）",
@@ -336,6 +378,13 @@
       "lrc": "js/music/漆柚;长平;池年;慕芸生;管莫书;若以止白 - 《岂吟叹》 ——《天官赐福》女性角色群像.lrc"
     },
     {
+      "name": "音阙诗听",
+      "artist": "花亦山",
+      "url": "js/music/花亦山 - 音阙诗听.opus",
+      "cover": "img/logo.png",
+      "lrc": "js/music/花亦山 - 音阙诗听.lrc"
+    },
+    {
       "name": "不肯赦当年【纯歌版】（Cover 上弦之月）",
       "artist": "Autumn绅",
       "url": "js/music/Autumn绅 - 不肯赦当年【纯歌版】（Cover 上弦之月）.mp3",
@@ -369,6 +418,20 @@
       "url": "js/music/赴人间《提灯映桃花》广播剧主题曲 - 五音Jw.mp3",
       "cover": "img/logo.png",
       "lrc": "js/music/赴人间《提灯映桃花》广播剧主题曲 - 五音Jw.lrc"
+    },
+    {
+      "name": "01. 自由の彼方へ(《魔道祖師》第三季主題曲) [《人間縱我》日文版]",
+      "artist": "鈴木達央、日野聡",
+      "url": "js/music/01. 自由の彼方へ(《魔道祖師》第三季主題曲) [《人間縱我》日文版].opus",
+      "cover": "img/logo.png",
+      "lrc": "js/music/01. 自由の彼方へ(《魔道祖師》第三季主題曲) [《人間縱我》日文版].lrc"
+    },
+    {
+      "name": "藍忘機角色歌「不忘」日語版",
+      "artist": "Kitkit_Lu",
+      "url": "js/music/日語版「不忘」 - Kitkit_Lu.opus",
+      "cover": "img/logo.png",
+      "lrc": "js/music/日語版「不忘」 - Kitkit_Lu.lrc"
     },
     {
       "name": "问情",
