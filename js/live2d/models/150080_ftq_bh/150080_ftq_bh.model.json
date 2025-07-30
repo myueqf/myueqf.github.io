@@ -1,0 +1,35 @@
+{
+    "expression": [
+        {
+            "file": "expression/idle.exp.json",
+            "name": "idle.exp.json"
+        },
+        {
+            "file": "expression/kaixin.exp.json",
+            "name": "kaixin.exp.json"
+        }
+    ],
+    "model": "model.moc",
+    "motions": {
+        "idle": [
+	    {
+                "file": "action/idle.mtn"
+            },
+            {
+                "file": "action/idle.mtn"
+            },
+            {
+                "file": "action/idle.mtn"
+            },
+            {
+                "file": "action/kaishan.mtn"
+            }
+        ]
+    },
+    "textures": [
+        "texture_00.png",
+	"texture_01.png"
+    ],
+    "physics": "moc/physics.json",
+    "version": "Sample 1.0.0"
+}
