@@ -30,6 +30,18 @@
         "idle": [
             {
                 "file": "action/idle.mtn"
+            },
+            {
+                "file": "action/idle.mtn"
+            },
+            {
+                "file": "action/idle.mtn"
+            },
+            {
+                "file": "action/chenglian.mtn"
+            },
+            {
+                "file": "action/liaofa.mtn"
             }
         ],
         "": [
