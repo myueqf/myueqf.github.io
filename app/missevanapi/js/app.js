@@ -80,7 +80,7 @@ async function getPage(fmId) {
     const proxyUrl = 'https://api.allorigins.win/raw?url=';
     const targetUrl = `https://www.missevan.com/sound/getdm?soundid=${fmId}`;
     const url = `${proxyUrl}${encodeURIComponent(targetUrl)}`;
-    
+
     try {
         const response = await fetch(url);
         if (!response.ok) {
