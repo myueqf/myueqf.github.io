@@ -181,6 +181,20 @@ main {
 .main-img {
     display: flex;
     align-items: center;
+    /* 文字光晕 */
+    text-shadow: 0 0 24px rgba(255, 255, 255, 0.3);
+}
+
+#logo-img {
+    /* 图片光晕 */
+    /* 语法：filter: drop-shadow(水平偏移 垂直偏移 模糊半径 颜色); */
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.3));
+    -webkit-filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
+}
+
+/* 鼠标悬停时光晕增强 */
+.main-img:hover {
+    text-shadow: 0 0 24px rgba(255, 255, 255, 0.4);
 }
 
 .main-img img {
@@ -196,7 +210,10 @@ main {
     width: 100%;
     margin-left: 12px;
     transform: translateY(-8%);
+    /* 添加过渡效果～ */
+    transition: all 0.3s ease-in-out;
 }
+
 /*主标题字体*/
 .img-title-big {
     font-size: 5rem;
