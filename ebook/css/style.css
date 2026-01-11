@@ -36,6 +36,12 @@ body::before {
     z-index: -1;
 }
 
+/* 入场淡入 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* 容器样式 */
 .container {
     max-width: 960px;
@@ -74,6 +80,7 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeIn 0.5s ease backwards;
 }
 
 .book-item:hover {
