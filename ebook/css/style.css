@@ -107,12 +107,16 @@ h1 {
 }
 .book-item .overview {
     flex-grow: 1;
-    max-height: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+    /* 设置固定行高，例如 1.5 */
+    line-height: 1.5;
+    /* 限制 4 行 */
+    -webkit-line-clamp: 4;
+    /* 计算公式：line-height (1.5) * lines (4) = 6em */
+    max-height: 6em;
 }
 
 .book-item a {
