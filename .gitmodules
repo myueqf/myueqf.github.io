@@ -1,6 +1,0 @@
-[submodule "music"]
-	path = music
-	url = git@github.com:myueqf/music.git
-[submodule "live2dAssets"]
-	path = live2d
-	url = git@github.com:myueqf/live2d.git
