@@ -3,19 +3,47 @@
 ///////////////////////////////
 
 $.ajax({
-      url: "music/music_list.json",
-      type: "GET",
-      dataType: "JSON",
-      success: function (data) {
+    url: "https://api.allorigins.win/raw?url=https://github.com/myueqf/music/releases/latest/download/playList.txt",
+    type: "GET",
+    dataType: "text",
+    success: function (data) {
+        const baseUrl = "https://cdn.jsdelivr.net/gh/myueqf/music/music/";
+        const defaultLrcUrl = "data:text/plain;charset=utf-8," + encodeURIComponent("[00:00.00]没有歌词");
+
+        const files = data.split(/\r?\n/)
+            .map(l => l.trim().replace(/^'|'$/g, '').replace(/\*$/, ''))
+            .filter(n => n);
+        const lrcSet = new Set(files.filter(f => f.endsWith('.lrc')));
+
+        /* 生成播放列表 */
+        const playList = files
+            .filter(file => /\.(mp3|m4a|ogg|flac|opus|wav)$/i.test(file)) // 防止把lrc当成歌放进列表
+            .map(file => {
+                const nameNoExt = file.substring(0, file.lastIndexOf('.'));
+                const lrcName = nameNoExt + '.lrc';
+
+                const parts = nameNoExt.split(' - ');
+                const artist = parts.length > 1 ? parts.pop() : '未知艺术家';
+                const name = parts.join(' - ') || nameNoExt;
+
+                return {
+                    name: name,
+                    artist: artist,
+                    url: baseUrl + encodeURIComponent(file),
+                    cover: 'img/logo.png',
+                    lrc: lrcSet.has(lrcName) ? (baseUrl + encodeURIComponent(lrcName)) : defaultLrcUrl
+                };
+            });
+
         const ap = new APlayer({
-          container: document.getElementById('aplayer'),
-          order: 'random',
-          preload: 'auto',
-          listMaxHeight: '336px',
-          volume: '0.5',
-          mutex: true,
-          lrcType: 3,
-          audio: data,
+            container: document.getElementById('aplayer'),
+            order: 'random',
+            preload: 'auto',
+            listMaxHeight: '336px',
+            volume: '0.5',
+            mutex: true,
+            lrcType: 3,
+            audio: playList
         });
 
 
