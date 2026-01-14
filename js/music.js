@@ -3,11 +3,11 @@
 ///////////////////////////////
 
 $.ajax({
-    url: "https://corsproxy.io/https://github.com/myueqf/music/releases/latest/download/playList.txt",
+    url: "https://corsproxy.io/?https://github.com/myueqf/music/releases/latest/download/playList.txt",
     type: "GET",
     dataType: "text",
     success: function (data) {
-        const baseUrl = "https://cdn.jsdelivr.net/gh/myueqf/music/music/";
+        const baseUrl = "https://cdn.jsdelivr.net/gh/myueqf/music@main/music/";
         const defaultLrcUrl = "data:text/plain;charset=utf-8," + encodeURIComponent("[00:00.00]没有歌词");
 
         const files = data.split(/\r?\n/)
