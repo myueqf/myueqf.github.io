@@ -508,14 +508,14 @@ color: rgb(244,167,89);
 let styleContent = `
 color: rgb(30,152,255);
 `
-let title1 = '真的有人会注意到这一行字嘛？'
+let title1 = '真的有人会看这里嘛。。？'
 let title2 = `
 ////////////////////////////////////////
-// ========= 明月清風の小窝 ========= //
+// ========= 明月洇の小窝 ========= //
 ////////////////////////////////////////
 `
 let content = `
-(∠・ω< )⌒☆
+（^-^）
 `
 console.log(`%c${title1} %c${title2}
 %c${content}`, styleTitle1, styleTitle2, styleContent)
