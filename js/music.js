@@ -3,7 +3,7 @@
 ///////////////////////////////
 
 $.ajax({
-    url: "https://corsproxy.io/?https://github.com/myueqf/music/releases/latest/download/playList.txt",
+    url: "https://corsproxy.io/?https://github.com/myueqf/music/releases/download/latest/playList.txt",
     type: "GET",
     dataType: "text",
     success: function (data) {
