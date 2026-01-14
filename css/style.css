@@ -822,6 +822,13 @@ i.iconfont.icon-github1 {
     flex-wrap: wrap;
 }
 
+#live2d-options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
 .form-radio {
     flex: 1 1 0%;
     width: 31.3%;
