@@ -26,8 +26,13 @@
   </div>
   <script src="../jquery.min.js"></script>
 <script>
-  const baseUrl = "https://cdn.jsdelivr.net/gh/myueqf/live2d@main/";
-  //const baseUrl = "http://127.0.0.1:8080/live2d/";
+  let baseUrl = "";
+  const hostname = window.location.hostname;
+  if (hostname === '127.0.0.1' || hostname === 'localhost' || hostname === '[::1]') {
+    baseUrl = "http://127.0.0.1:8080/live2d/";
+    } else {
+    baseUrl = "https://cdn.jsdelivr.net/gh/myueqf/live2d@main/";
+  }
   const listUrl = "https://corsproxy.io/?https://github.com/myueqf/live2d/releases/download/latest/live2dList.txt";
 
   const omlConfig = {
