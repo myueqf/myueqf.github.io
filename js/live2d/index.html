@@ -5,9 +5,80 @@
   <title>demo</title>
   <!-- 引入oh-my-live2d -->
   <script src="../live2d.min.js"></script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
+    .controls { position: sticky; top: 0; background: white; padding: 15px; border-bottom: 2px solid #ddd; z-index: 100; display: flex; gap: 10px; }
+    button { padding: 8px 15px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 4px; }
+    button:hover { background: #0056b3; }
+    #model-list { margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+    .model-item { background: white; padding: 10px; border: 1px solid #ddd; cursor: pointer; font-size: 13px; word-break: break-all; }
+    .model-item:hover { background: #e9ecef; border-color: #007bff; }
+    #status { color: #666; font-size: 14px; margin-left: 10px; align-self: center; }
+  </style>
 </head>
 <body>
-  <!-- 引入配置文件 -->
-  <script src="../live2d.config.js"></script>
+<div class="controls">
+  <button onclick="manualLoad()">输入模型/URL</button>
+  <button onclick="fetchList()" style="background:#28a745">刷新</button>
+  <span id="status">就绪</span>
+</div>
+<div id="model-list">
+  </div>
+  <script src="../jquery.min.js"></script>
+<script>
+  const baseUrl = "https://cdn.jsdelivr.net/gh/myueqf/live2d@main/";
+  //const baseUrl = "http://127.0.0.1:8080/live2d/";
+  const listUrl = "https://corsproxy.io/?https://github.com/myueqf/live2d/releases/download/latest/live2dList.txt";
+
+  const omlConfig = {
+      mobileDisplay: true,
+      dockedPosition: "right",
+      menus: { disable: true },
+      tips: { disable: true },
+      statusBar: { disable: true }
+  };
+
+  function loadModel(path) {
+      $("#status").text(" " + path);
+      OML2D.loadOml2d({
+          ...omlConfig,
+          models: [{ path: path }]
+      });
+  }
+
+  // 列表获取
+  function fetchList() {
+      $("#status").text("正在获取列表...");
+      $.get(listUrl, function(data) {
+          const lines = data.split(/\r?\n/).map(l => l.trim()).filter(l => l && !l.endsWith('.md') && !l.endsWith('.txt'));
+          const container = $("#model-list").empty();
+          lines.forEach(name => {
+              const $item = $(`<div class="model-item">${name}</div>`);
+              $item.on('click', () => {
+                  const fullPath = `${baseUrl}${name}/${name}.model.json`;
+                  loadModel(fullPath);
+              });
+              container.append($item);
+          });
+          $("#status").text(`完成， ${lines.length} 个模型`);
+      });
+  }
+
+  // 手动输入弹窗
+  function manualLoad() {
+      const input = prompt("输入模型名称或完整 URL:", "");
+      if (!input) return;
+
+      let finalPath = "";
+      if (input.startsWith("http")) {
+          finalPath = input; // 直接访问
+      } else {
+          finalPath = `${baseUrl}${input}/${input}.model.json`;
+      }
+      loadModel(finalPath);
+  }
+
+  $(document).ready(fetchList);
+</script>
 </body>
 </html>
