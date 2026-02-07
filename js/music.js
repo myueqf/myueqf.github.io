@@ -3,7 +3,7 @@
 ///////////////////////////////
 
 $.ajax({
-    url: "https://api.allorigins.win/raw?url=https://github.com/myueqf/music/releases/download/latest/playList.txt",
+    url: "https://proxy.corsfix.com/?https://github.com/myueqf/music/releases/download/latest/playList.txt",
     type: "GET",
     dataType: "text",
     success: function (data) {
