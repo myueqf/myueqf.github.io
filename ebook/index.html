@@ -21,5 +21,17 @@
     <script src="image/bg.js"></script>
     <script src="js/live2d.config.js"></script>
     <script src="../js/QAQ.js"></script>
+    <script>
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const paramValue = urlParams.get('list');
+            const scriptName = paramValue ? `${paramValue}.js` : 'all.js';
+            const scriptSrc = `script/${scriptName}`;
+            const script = document.createElement('script');
+            script.src = scriptSrc;
+            script.async = true;
+            document.head.appendChild(script);
+        })();
+    </script>
 </body>
 </html>

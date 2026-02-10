@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const bookListContainer = document.getElementById('bookList');
-    const jsonUrls = [
-        'js/booklist.json',
-        'js/booklist1.json'
-    ];
+    const jsonUrls = [];
 
     /**
      * @param {string[]} urls - JSON 文件路径数组
