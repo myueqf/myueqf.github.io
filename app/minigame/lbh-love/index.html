@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>成为我的恋人吗？</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 新增图片容器 -->
+    <div class="header-image">
+        <img id="romanticImage" src="images/浪漫背景.png" alt="浪漫背景" loading="lazy">
+        <div class="image-text">@shajeh</div>
+    </div>
+    <div id="question">师尊，可以成为我的恋人吗</div>
+    <div id="buttons">
+        <button id="yes" onclick="handleYesClick()">可以</button>
+        <button id="no" onclick="handleRejectClick()">拒绝</button>
+    </div>
+    <!-- 添加音频元素 -->
+    <audio id="doorbellSound" src="./doorbell.mp3"></audio>
+    <script src="js/main.js"></script>
+</body>
+</html>
