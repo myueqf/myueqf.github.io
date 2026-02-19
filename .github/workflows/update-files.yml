@@ -1,0 +1,17 @@
+name: (=^･ω･^=)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  trigger-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
+          repository: myueqf/txt 
+          event-type: trigger-download-task
