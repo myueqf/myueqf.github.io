@@ -35,7 +35,7 @@ function initLive2D() {
 
     let listUrl = "";
     if (type === "2") {
-        listUrl = "https://proxy.corsfix.com/?https://github.com/myueqf/live2d/releases/download/latest/live2dList.txt";
+        listUrl = "./txt/live2dList.txt";
         //listUrl = "https://api.allorigins.win/raw?url=https://github.com/myueqf/live2d/releases/download/latest/live2dList.txt";
     } else {
         listUrl = "https://cdn.jsdelivr.net/gh/myueqf/live2d@main/starList.txt";
