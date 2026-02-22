@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const bookListContainer = document.getElementById('bookList');
     const jsonUrls = [];
 
+    let extraList = [];
+    let extraListMode = null; // null=无过滤, 'whitelist'=白名单, '0'=黑名单移末尾, '1'=黑名单直接移除
+    let currentBooks = [];
+
     /**
      * @param {string[]} urls - JSON 文件路径数组
      */
@@ -13,19 +17,90 @@ document.addEventListener('DOMContentLoaded', () => {
         return Promise.all(fetchPromises)
             .then(results => {
                 const books = results.flat().filter(book => {return book.url && !book.url.endsWith('123.txt')});
-                renderBooks(books);
+                currentBooks = books;
+                applyFilterAndRender();
             })
             .catch(error => {
                 console.error('Error:', error);
             });
     };
 
+    /**
+     * @param {string[]} urls - 黑名单路径
+     * @param {string} [mode] - '0' 黑名单移末尾, '1' 黑名单直接移除, 不传则为白名单
+     */
+    window.addExtraXwX = (urls, mode) => {
+        const fetchPromises = urls.map(url =>
+            fetch(url)
+                .then(response => response.text())
+                .then(text => {
+                    return text.split('\n').map(line => line.trim()).filter(line => line);
+                })
+                .catch(() => [])
+        );
+
+        return Promise.all(fetchPromises)
+            .then(results => {
+                extraList = results.flat();
+
+                if (mode === '0') {
+                    extraListMode = '0';
+                } else if (mode === '1') {
+                    extraListMode = '1';
+                } else {
+                    extraListMode = 'whitelist';
+                }
+
+                applyFilterAndRender();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    };
+
+    const applyFilterAndRender = () => {
+        if (!currentBooks || currentBooks.length === 0) return;
+
+        let filteredBooks = [...currentBooks];
+
+        if (extraListMode === 'whitelist') {
+            // 只显示白名单内的
+            filteredBooks = currentBooks.filter(book => {
+                return extraList.some(entry =>
+                    entry === book.name || entry === book.author
+                );
+            });
+        } else if (extraListMode === '0') {
+            // 移到末尾
+            const blacklisted = [];
+            const whitelisted = [];
+
+            currentBooks.forEach(book => {
+                if (extraList.some(entry =>
+                    entry === book.name || entry === book.author
+                )) {
+                    blacklisted.push(book);
+                } else {
+                    whitelisted.push(book);
+                }
+            });
+
+            filteredBooks = [...whitelisted, ...blacklisted];
+        } else if (extraListMode === '1') {
+            // 直接移除
+            filteredBooks = currentBooks.filter(book => {
+                return !extraList.some(entry =>
+                    entry === book.name || entry === book.author
+                );
+            });
+        }
+
+        renderBooks(filteredBooks);
+    };
+
     const renderBooks = (books) => {
         if (!books || books.length === 0) return;
-        const loadingMsg = bookListContainer.querySelector('.loading-message');
-        if (loadingMsg) {
-            bookListContainer.innerHTML = '';
-        }
+        bookListContainer.innerHTML = '';
 
         books.forEach(book => {
             const bookItem = document.createElement('div');
