@@ -17,7 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return Promise.all(fetchPromises)
             .then(results => {
                 const books = results.flat().filter(book => {return book.url && !book.url.endsWith('123.txt')});
-                currentBooks = books;
+                // 追加新书籍，根据 URL 去重
+                const existingUrls = new Set(currentBooks.map(b => b.url));
+                const newBooks = books.filter(b => !existingUrls.has(b.url));
+                currentBooks = [...currentBooks, ...newBooks];
                 applyFilterAndRender();
             })
             .catch(error => {
