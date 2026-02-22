@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const renderBooks = (books) => {
         if (!books || books.length === 0) return;
+        console.log(`📚：${books.length}`);
         bookListContainer.innerHTML = '';
 
         books.forEach(book => {
