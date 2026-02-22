@@ -25,7 +25,7 @@
         (function() {
             const urlParams = new URLSearchParams(window.location.search);
             const paramValue = urlParams.get('list');
-            const scriptName = paramValue ? `${paramValue}.js` : 'all.js';
+            const scriptName = paramValue ? `${paramValue}.js` : 'default.js';
             const scriptSrc = `script/${scriptName}`;
             const script = document.createElement('script');
             script.src = scriptSrc;
