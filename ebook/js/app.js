@@ -138,6 +138,14 @@ document.addEventListener('DOMContentLoaded', () => {
                   <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
                 </svg>`;
                 downloadLink.download = `${book.name} 作者：${book.author}.txt`;
+
+                // 如果有patch字段，添加patch选择功能
+                if (book.patch) {
+                    downloadLink.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        showPatchDialog(book);
+                    });
+                }
             }
 
             bookItem.appendChild(bookName);
@@ -155,4 +163,145 @@ document.addEventListener('DOMContentLoaded', () => {
             bookListContainer.innerHTML = '<p class="loading-message">内容消失了。。猫猫哭哭QAQ</p>';
         }
     });
+
+    /**
+     * 显示patch选择对话框
+     * @param {Object} book - 书籍对象
+     */
+    function showPatchDialog(book) {
+        const dialog = document.createElement('div');
+        dialog.className = 'patch-dialog-overlay';
+        dialog.innerHTML = `
+            <div class="patch-dialog">
+                <h3>下载选项 - ${book.name}</h3>
+                <p class="patch-info">${book.patch_info || '这本小说似乎包含补丁。。?'}</p>
+                <div class="patch-options">
+                    <button class="patch-option-btn original-btn">下载原版</button>
+                    <button class="patch-option-btn patched-btn">${book.patch_name}</button>
+                    <button class="patch-option-btn cancel-btn">取消</button>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(dialog);
+
+        // 事件处理
+        const originalBtn = dialog.querySelector('.original-btn');
+        const patchedBtn = dialog.querySelector('.patched-btn');
+        const cancelBtn = dialog.querySelector('.cancel-btn');
+
+        originalBtn.addEventListener('click', () => {
+            downloadOriginal(book);
+            dialog.remove();
+        });
+
+        patchedBtn.addEventListener('click', async () => {
+            patchedBtn.disabled = true;
+            patchedBtn.textContent = '应用补丁中...';
+
+            try {
+                await downloadPatched(book);
+            } catch (error) {
+                console.error('应用补丁失败:', error);
+                alert('应用补丁失败');
+            } finally {
+                patchedBtn.disabled = false;
+                dialog.remove();
+            }
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            dialog.remove();
+        });
+
+        // 点击背景关闭
+        dialog.addEventListener('click', (e) => {
+            if (e.target === dialog) {
+                dialog.remove();
+            }
+        });
+    }
+
+    /**
+     * 下载原版
+     * @param {Object} book - 书籍对象
+     */
+    function downloadOriginal(book) {
+        const a = document.createElement('a');
+        a.href = book.url;
+        a.download = `${book.name} 作者：${book.author}.txt`;
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(() => {
+            document.body.removeChild(a);
+        }, 100);
+    }
+
+    /**
+     * 下载补丁版
+     * @param {Object} book - 书籍对象
+     */
+    async function downloadPatched(book) {
+        // 加载diff库
+        const diffModule = await loadDiffModule();
+
+        // 获取原始内容
+        const originalResponse = await fetch(book.url);
+        const originalText = await originalResponse.text();
+
+        // 获取补丁内容
+        const patchResponse = await fetch(book.patch);
+        const patchText = await patchResponse.text();
+
+        // 解析并应用补丁
+        const patches = diffModule.parsePatch(patchText);
+        const patchedText = diffModule.applyPatch(originalText, patches);
+
+        if (patchedText === false) {
+            throw new Error('应用补丁失败');
+        }
+
+        // 创建并下载文件
+        const blob = new Blob([patchedText], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `「${book.patch_name}」${book.name} 作者：${book.author}.txt`;
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+
+        // 清理
+        setTimeout(() => {
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }, 100);
+    }
+
+    /**
+     * 加载diff模块
+     */
+    async function loadDiffModule() {
+        // 如果已经加载，直接返回
+        if (window.Diff && window.Diff.applyPatch) {
+            return window.Diff;
+        }
+
+        // 否则动态加载diff.js
+        return new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = 'js/diff.js';
+            script.onload = () => {
+                // diff.js通过UMD暴露到全局
+                if (typeof window.Diff !== 'undefined') {
+                    resolve(window.Diff);
+                } else {
+                    reject(new Error('diff.js加载失败，未找到Diff对象'));
+                }
+            };
+            script.onerror = reject;
+            document.head.appendChild(script);
+        });
+    }
 });
